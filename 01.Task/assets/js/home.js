@@ -5,13 +5,13 @@ const BASE_URL = "http://localhost:8080/products";
 async function getDataAll() {
   let res = await axios(`${BASE_URL}`);
   console.log(res.data);
-  drawCard(res.dat);
+  drawCard(res.data);
 }
 getDataAll();
 
 async function drawCard(data) {
-  cards.innerHTML = "";
-  data.forEach((element) => {
+  cards.innerHTML ="";
+  data?.forEach((element)=> {
     const cardsElement = document.createElement("div");
     cardsElement.className = "card";
     cards.innerHTML += `
